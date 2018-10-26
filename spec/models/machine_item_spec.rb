@@ -8,10 +8,7 @@ describe MachineItem, type: :model do
     it { should belong_to :item}
     it { should belong_to :machine}
 
-
-
   end
-
 
 
 end
