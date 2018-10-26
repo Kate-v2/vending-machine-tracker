@@ -2,3 +2,4 @@
 <%= @items.each do |item| %>
   <%= item.name %> $<%= item.price %>
 <% end %>
+<p>Average price $<%=@machine.average_price%></p>
