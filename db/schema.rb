@@ -24,10 +24,10 @@ ActiveRecord::Schema.define(version: 20181026161425) do
 
   create_table "machine_items", force: :cascade do |t|
     t.bigint "machine_id"
-    t.bigint "items_id"
+    t.bigint "item_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["items_id"], name: "index_machine_items_on_items_id"
+    t.index ["item_id"], name: "index_machine_items_on_item_id"
     t.index ["machine_id"], name: "index_machine_items_on_machine_id"
   end
 
@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 20181026161425) do
     t.string "name"
   end
 
-  add_foreign_key "machine_items", "items", column: "items_id"
+  add_foreign_key "machine_items", "items"
   add_foreign_key "machine_items", "machines"
   add_foreign_key "machines", "owners"
 end
