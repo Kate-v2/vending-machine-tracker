@@ -13,4 +13,12 @@ describe Machine, type: :model do
 
   end
 
+  describe 'math' do
+
+    it 'should average the price of all stocked items' do
+      skip
+    end
+
+  end
+
 end
