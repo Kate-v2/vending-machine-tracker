@@ -23,10 +23,15 @@ feature 'When a user visits a vending machine show page' do
     expect(page).to have_content('$1')
     expect(page).to have_content('Snack 2')
     expect(page).to have_content('$2')
-
-
-
   end
+
+  scenario 'they see all snacks in that machine with name and price' do
+    visit machine_path(@machine1)
+
+    expect(page).to have_content("Average price $#{@machine1.average_price}")
+  end
+
+
 
 
 
